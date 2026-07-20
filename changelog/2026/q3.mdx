@@ -1,0 +1,25 @@
+---
+title: "Camila Q3 2026 Changelog: July, August, and September Releases"
+sidebarTitle: "Q3 2026"
+description: "All Camila product changes shipped in Q3 2026, covering new features, improvements, and bug fixes released between July and September 2026."
+---
+
+This page covers all changes shipped in Q3 2026 (July–September). Entries are tagged as **Feature**, **Bug Fix**, or **Improvement** to help you quickly identify the nature of each change.
+
+<Note>
+  This is the latest quarter. New entries are added here as they ship.
+</Note>
+
+---
+
+### July 19th, 2026
+
+**Improvement** — **WhatsApp message delivery status indicators**
+
+**Product Category:** AI Workflows
+
+Sales agents can now see real-time delivery status on every outbound WhatsApp message directly from the Contact detail page. Each message displays one of four status labels: **Enviado** (Sent), **Entregado** (Delivered), **Leído** (Read), or **Fallido** (Failed). Follow-up templates triggered by Camila's automation also display a human-readable label — for example, _Plantilla de Seguimiento 04 · Ver contenido en WhatsApp Manager_ — instead of the raw template key stored in the system.
+
+This improvement is backed by two new Supabase schema additions: new columns (`outbound_message_status`, `wamid`, `is_follow_up`) on the `whatsapp_messages` table and a new `whatsapp_status_events` table that tracks real-time delivery receipts using the WhatsApp Business API's message ID (`wamid`).
+
+**How to try:** Open any Contact → WhatsApp tab. Each outbound message now shows a colored status badge next to the timestamp. Automated follow-up messages display their template name alongside a link to view content in WhatsApp Manager.
