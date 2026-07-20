@@ -1,0 +1,93 @@
+---
+title: "Camila Updates FAQ: Releases, Breaking Changes & More"
+sidebarTitle: "FAQ"
+description: "Answers to the most common questions about how Camila ships updates, handles breaking changes, and communicates new releases to customers."
+---
+
+Have questions about how Camila handles releases, communicates changes, or manages breaking API updates? You'll find answers to the most common questions below.
+
+<AccordionGroup>
+  <Accordion title="How will I know when a new version ships?">
+    We communicate every release through multiple channels so nothing catches you off guard:
+
+    - **This page** — The Product Updates tab is always the first place to check. It's updated on or before the release date for every major and minor version.
+    - **Email announcements** — We send email notifications to all workspace admins for every major and minor release. Emails include a summary of what changed, any action required, and a link to the full changelog.
+    - **In-app notifications** — If a release contains breaking changes or requires action from your team, you'll see a banner notification inside Camila when you next log in. These notifications link directly to the relevant migration guide.
+
+    Patch releases (bug fixes and security updates) are typically deployed silently unless they fix a user-facing issue, in which case they'll appear in the Changelog.
+  </Accordion>
+
+  <Accordion title="Do I need to do anything when a new version releases?">
+    It depends on the type of release:
+
+    - **Patch releases (x.x.1, x.x.2, etc.)** — No action needed. These are deployed automatically and are fully backward-compatible. You may notice bugs fixed or small improvements, but nothing in your workflow will break.
+    - **Minor releases (x.1.0, x.2.0, etc.)** — No action needed. Minor releases are always backward-compatible. New features are opt-in where possible. You can adopt new capabilities at your own pace.
+    - **Major releases (2.0, 3.0, etc.)** — Action may be required if your team uses the Camila API directly or relies on specific platform behaviors that have changed. We will communicate any required migration steps with **at least 4 weeks' notice** before a major release goes live, so your team has time to prepare.
+
+    When in doubt, check the Major Releases page and the Changelog for the specific version you're moving to.
+  </Accordion>
+
+  <Accordion title="What counts as a breaking change?">
+    We define a breaking change as any modification that could cause an existing, correctly implemented integration or workflow to stop working without any changes on your end. Specifically, this includes:
+
+    - **Removing or renaming an API field** — For example, renaming `data.items` to `data.results` (as in the v2.0 release).
+    - **Changing or removing an endpoint URL** — Moving an endpoint to a new path or deprecating it entirely.
+    - **Modifying default behavior** — Any change where the default output or behavior of a feature changes in a way that could break an integration relying on the previous default.
+    - **Changing authentication requirements** — Any update to how tokens, signatures, or session credentials are validated.
+
+    Changes that are **not** considered breaking include: adding new optional fields to API responses, adding new endpoints, improving error messages, and performance improvements.
+  </Accordion>
+
+  <Accordion title="How long do you support older API versions?">
+    We support the previous major API version for **at least 12 months** after a new major version ships. During this period, the older API version continues to function normally and receives security patches.
+
+    For example, when Camila 2.0 shipped in December 2024, the v1 API entered a deprecation period and will remain active until at least December 2025. After that point, it may be removed with appropriate notice.
+
+    Deprecation notices always appear in the Changelog with the specific sunset date. We will also send direct email reminders to any workspace that has active traffic on a deprecated API version in the 90, 30, and 7 days leading up to the sunset date.
+  </Accordion>
+
+  <Accordion title="Where do I report a bug?">
+    We want to hear about bugs as quickly as possible so we can fix them for everyone. Here's how to report one:
+
+    - **In-app feedback button** — Click the **"Send Feedback"** button in the bottom-left corner of any Camila page. This is the fastest way to reach us and automatically includes your session context.
+    - **Email** — Send a report to [bugs@camila.app](mailto:bugs@camila.app) for issues you'd prefer to communicate in more detail.
+
+    For either method, please include:
+    - Your **workspace ID** (found in Settings → General)
+    - **Steps to reproduce** the issue
+    - **Expected behavior** vs. **actual behavior**
+    - Screenshots or a screen recording if the issue is visual
+
+    The more detail you provide, the faster our engineering team can diagnose and fix the problem.
+  </Accordion>
+
+  <Accordion title="How can I give feedback on the roadmap?">
+    Community feedback directly shapes what we build next — it's not just a formality. Here's how to make your voice heard:
+
+    - **Feedback portal** — Visit [feedback.camila.app](https://feedback.camila.app) to browse ideas already submitted by the community, upvote the ones that matter most to you, and submit your own feature requests.
+    - **Contact the team** — Reach out via the [Contact](/updates/contact) page for more detailed conversations about specific needs, especially if you're an Enterprise customer with complex requirements.
+    - **Roadmap page** — The [Roadmap](/updates/roadmap) page shows what's actively in progress, what's planned, and what we're considering. Items on the roadmap reflect a combination of community feedback, strategic priorities, and customer conversations.
+
+    The product team reviews all submissions and upvotes regularly. High-impact, widely-requested ideas get surfaced directly to the product leadership team.
+  </Accordion>
+
+  <Accordion title="Are updates rolled out to all users at once?">
+    Not always. We use progressive rollouts to reduce risk and catch unexpected issues before they affect everyone:
+
+    - **Minor and patch releases** are progressively rolled out over **24–48 hours**. A small percentage of workspaces receive the update first, and we monitor error rates and performance before expanding to 100% of users.
+    - **Major releases** are made available on a **set date announced in advance**. Because major releases may require action from your team, we don't push them silently — workspace admins are notified and the release is available from a specific date.
+
+    During a progressive rollout, you might notice that a feature mentioned in the changelog isn't visible yet in your workspace. This is normal — it means your workspace is in a later cohort. You'll receive the update within the 24–48 hour window.
+  </Accordion>
+
+  <Accordion title="Does Camila have a status page?">
+    Yes. Visit **[status.camila.app](https://status.camila.app)** for:
+
+    - **Real-time service status** across all Camila components (API, dashboard, file storage, webhooks, integrations)
+    - **Active incidents** with live updates from the engineering team
+    - **Incident history** so you can look up past outages and read post-mortems
+    - **Uptime metrics** over the past 90 days
+
+    You can subscribe to status updates via email or RSS so you're notified immediately when an incident is opened or resolved — without needing to check the page manually.
+  </Accordion>
+</AccordionGroup>

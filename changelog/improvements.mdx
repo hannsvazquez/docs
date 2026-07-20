@@ -1,0 +1,42 @@
+---
+title: "Camila Improvements — Performance & UX Enhancements"
+sidebarTitle: "Improvements"
+description: "A complete index of all performance, usability, and quality-of-life improvements shipped in Camila, organized by release version and quarter."
+---
+
+Improvements in Camila are backward-compatible enhancements that make the product faster, more accessible, and easier to use. They don't add new features or break existing behavior.
+
+## Performance improvements
+
+| Improvement | Version | Quarter | Details |
+|-------------|---------|---------|---------|
+| Dashboard load time −40% | v2.4.0 | Q2 2025 | Lazy-loading panel data and parallelizing widget queries cut average dashboard load time from ~3.2 s to ~1.9 s. |
+| Search indexing now real-time | v2.3.0 | Q2 2025 | Record changes are reflected in search results in under 500 ms, replacing the previous 5-minute index refresh cycle. |
+| API response time p99: 820 ms → 190 ms | v2.0.0 | Q4 2024 | A query-planner rewrite and database index audit reduced 99th-percentile API latency by 77%. |
+| Record detail pages 50% faster | v1.5.0 | Q2 2024 | Related-record associations are now fetched in a single batched query instead of N+1 individual requests. |
+| Bundle size −22% | v1.5.1 | Q2 2024 | Tree-shaking improvements and icon-font subsetting reduced the main JS bundle from 1.4 MB to 1.1 MB (gzipped). |
+| First meaningful paint \<1 second | v1.2.0 | Q1 2024 | Critical-path CSS is now inlined and non-essential scripts are deferred, bringing FMP under 1 s on a standard connection. |
+
+## UX & accessibility improvements
+
+| Improvement | Version | Quarter | Details |
+|-------------|---------|---------|---------|
+| Tooltip ARIA labels | v2.3.1 | Q2 2025 | All icon-only buttons and action tooltips now include descriptive `aria-label` attributes, improving screen-reader navigation. |
+| Onboarding flow −30% steps | v2.2.0 | Q1 2025 | The new-user onboarding wizard was condensed from 10 steps to 7 by combining related configuration screens and adding smart defaults. |
+| Email deep-links in notifications | v2.1.1 | Q1 2025 | Notification emails now link directly to the relevant record rather than to the workspace root, reducing navigation friction. |
+| Mobile layout improvements | v2.1.0 | Q1 2025 | The record list and detail views were re-layouted for screens below 768 px, resolving overflow and tap-target issues. |
+| Dashboard widgets drag-and-drop | v1.7.0 | Q3 2024 | Dashboard widgets can now be freely repositioned via drag-and-drop, with layout persisted per user. |
+| Autosave on all forms | v1.6.0 | Q2 2024 | Every editable form in Camila now autosaves changes after a 2-second idle period, eliminating data loss on accidental navigation. |
+
+## Developer experience improvements
+
+| Improvement | Version | Details |
+|-------------|---------|---------|
+| API rate limit headers | v2.3.0 | Every API response now includes `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset` headers so clients can self-throttle proactively. |
+| Webhook signature verification | v2.2.0 | Outbound webhook payloads are signed with HMAC-SHA256 using a per-endpoint secret, allowing receivers to verify payload authenticity. |
+| Session token auto-refresh | v1.9.2 | Active sessions now silently refresh their token 60 seconds before expiry, preventing mid-session logouts for long-running workflows. |
+| Password reset email speed | v1.7.1 | Password reset emails are now dispatched via a dedicated high-priority queue, reducing delivery time from up to 2 minutes to under 10 seconds. |
+
+<Tip>
+  Check the quarterly release notes for full context on each improvement, including before/after metrics, migration notes, and related configuration options.
+</Tip>

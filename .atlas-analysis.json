@@ -1,0 +1,91 @@
+{
+  "projectType": "saas",
+  "projectName": "Camila",
+  "projectDescription": "Camila is a SaaS application that publishes technical changelogs and product update announcements for its users and stakeholders.",
+  "theme": "willow",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "changelog/introduction",
+              "changelog/versioning"
+            ]
+          },
+          {
+            "group": "2025",
+            "pages": [
+              "changelog/2025/q2",
+              "changelog/2025/q1"
+            ]
+          },
+          {
+            "group": "2024",
+            "pages": [
+              "changelog/2024/q4",
+              "changelog/2024/q3",
+              "changelog/2024/q2",
+              "changelog/2024/q1"
+            ]
+          },
+          {
+            "group": "Release Types",
+            "pages": [
+              "changelog/features",
+              "changelog/bug-fixes",
+              "changelog/improvements"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Product Updates",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "updates/introduction",
+              "updates/roadmap"
+            ]
+          },
+          {
+            "group": "Announcements",
+            "pages": [
+              "updates/announcements/latest",
+              "updates/announcements/archive"
+            ]
+          },
+          {
+            "group": "Releases",
+            "pages": [
+              "updates/releases/major",
+              "updates/releases/minor"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "updates/faq",
+              "updates/contact"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Technical changelog with versioned release notes for features, bug fixes, and improvements",
+    "Product Updates space managed by the Product Marketing team",
+    "Quarterly and annual release archives",
+    "Categorized release types: features, bug fixes, and improvements",
+    "Public roadmap visibility",
+    "Major and minor release announcements"
+  ],
+  "publicApiSurface": []
+}

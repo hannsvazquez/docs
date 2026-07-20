@@ -1,0 +1,81 @@
+---
+title: "Camila Major Releases: Version Milestones & Launch Stories"
+sidebarTitle: "Major Releases"
+description: "Deep dives into every major Camila release, covering what changed, why it matters, and what your team needs to do before upgrading."
+---
+
+Major releases in Camila (x.0.0 versions) mark platform milestones. They introduce significant new capabilities and, where necessary, breaking changes. This page tells the story behind each major release — what we built, why, and what it means for you.
+
+## Camila 2.0 — December 2024
+
+<Warning>
+  This release contains breaking API changes. If your team uses the Camila API directly, review the changes below before upgrading.
+</Warning>
+
+### What's New
+
+Camila 2.0 is the most significant update we've ever shipped. Here's what landed:
+
+- **Real-time collaboration** — Multiple team members can now work in the same workspace simultaneously, with live presence indicators and conflict-free editing.
+- **Unified API v2** — A fully redesigned API surface with consistent response shapes, improved error codes, and comprehensive pagination across every endpoint.
+- **4× faster API response times** — Infrastructure improvements and query optimizations mean your integrations and dashboards load dramatically faster across the board.
+
+### Breaking Changes
+
+The following changes affect teams that integrate directly with the Camila API. Please review each item carefully before upgrading your production environment.
+
+**1. List endpoint response shape — `data.items` renamed to `data.results`**
+
+The `data.items` field on all list endpoints has been renamed to `data.results`. Any code that reads this field must be updated.
+
+```json filename="Before (v1.x)"
+{
+  "data": {
+    "items": [...]
+  }
+}
+```
+
+```json filename="After (v2.x)"
+{
+  "data": {
+    "results": [...]
+  }
+}
+```
+
+**2. API base path deprecation**
+
+The v1 API base path (`/api/v1/`) is deprecated as of this release and will be removed entirely in v3.0. Begin migrating all requests to `/api/v2/` now to avoid disruption when v3.0 ships.
+
+### Migration Steps
+
+<Steps>
+  <Step title="Update list endpoint consumers">
+    Review all your API calls that read `data.items` and update them to `data.results`. This affects every list endpoint in the API, including records, users, workspaces, and audit logs.
+  </Step>
+  <Step title="Update your base URL">
+    Update your base URL from `/api/v1/` to `/api/v2/` if you are using the versioned path. This ensures you receive v2 response shapes and have access to all new endpoints.
+  </Step>
+  <Step title="Test in staging before going live">
+    Test your integration thoroughly in a staging workspace before switching production traffic to the v2 API. Use Camila's built-in API explorer to validate response shapes against your expectations.
+  </Step>
+</Steps>
+
+<Card title="Full Technical Release Notes — Q4 2024" icon="file-lines" href="/changelog/2024/q4">
+  Read the complete changelog for Camila 2.0, including every API change, bug fix, performance improvement, and migration detail.
+</Card>
+
+---
+
+## What to Expect in Camila 3.0
+
+We're already building what comes next. Camila 3.0 will focus on intelligence, mobility, and enterprise-grade control:
+
+- **AI-assisted features** — Smart suggestions, automated categorization, and natural-language search across your workspace.
+- **Mobile apps** — Native iOS and Android apps so your team can stay productive from anywhere.
+- **Advanced permissions** — Granular, attribute-based access controls for larger organizations with complex permission requirements.
+
+No release date has been announced yet. Follow the roadmap page for the latest status on these initiatives and to share your feedback on what matters most to your team.
+
+[View the Camila Roadmap →](/updates/roadmap)

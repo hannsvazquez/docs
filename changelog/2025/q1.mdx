@@ -1,0 +1,50 @@
+---
+title: "Camila Q1 2025 Changelog: January, February, March Releases"
+sidebarTitle: "Q1 2025"
+description: "All Camila product changes shipped in Q1 2025, covering new features, bug fixes, and improvements released between January and March 2025."
+---
+
+This page covers all changes shipped in Q1 2025 (January–March). Entries are tagged as **Feature**, **Bug Fix**, or **Improvement** to help you quickly scan for what's relevant to your workflow.
+
+---
+
+### v2.2.0 — March 2025
+
+**Feature** — **Team workspaces**
+Users can now create shared workspaces and invite collaborators with role-based access control. Three roles are available out of the box:
+
+- **Admin** — full access to workspace settings, billing, and member management
+- **Editor** — can create, edit, and delete content within the workspace
+- **Viewer** — read-only access to all workspace content
+
+**Feature** — **Webhook signature verification**
+All outbound webhooks now include an `X-Camila-Signature` header. The signature is computed using HMAC-SHA256 over the raw request body, signed with your webhook secret. Use this header to verify that webhook payloads originate from Camila and have not been tampered with.
+
+**Improvement** — **Redesigned onboarding flow**
+New users now reach their first productive action in 30% fewer steps. The updated flow removes redundant confirmation screens and surfaces key setup tasks — like connecting an integration or inviting a teammate — earlier in the journey.
+
+---
+
+### v2.1.1 — February 2025
+
+**Bug Fix** — **Silent failure on large file uploads**
+Fixed an edge case where files over 50 MB failed to upload without surfacing any error message to the user. The upload request now correctly returns a `413 Payload Too Large` error with a descriptive message when the file size limit is exceeded.
+
+**Bug Fix** — **Incorrect totals in summary widgets**
+Corrected a calculation error that caused summary widgets (such as total records, total value, and item counts) to display incorrect totals when one or more filters were applied. Totals now accurately reflect the filtered dataset.
+
+**Improvement** — **Deep-links in email notifications**
+Email notifications now include a direct deep-link to the specific item, record, or action that triggered the notification. Previously, links pointed to the top-level section rather than the individual item.
+
+---
+
+### v2.1.0 — January 2025
+
+**Feature** — **Dark mode**
+Full dark mode support is now available across all Camila pages and components. Dark mode respects your system preference by default and can also be toggled manually from your account settings.
+
+**Feature** — **Keyboard shortcuts**
+Global keyboard shortcuts are now available for navigation and common quick actions throughout the app. Press `?` anywhere in Camila to open the full shortcut reference panel.
+
+**Improvement** — **Mobile layout improvements**
+List views and detail views have been updated with a responsive layout pass for small-screen devices. Items are now easier to tap, information density is better balanced on narrow viewports, and horizontal scrolling has been eliminated on all core pages.

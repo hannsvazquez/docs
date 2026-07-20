@@ -1,0 +1,25 @@
+---
+title: "Camila Q2 2024 Release Notes — April to June 2024"
+sidebarTitle: "Q2 2024"
+description: "All Camila product changes shipped in Q2 2024, including new features, bug fixes, and improvements released between April and June 2024."
+---
+
+Q2 2024 brought security-first enhancements and a richer collaboration experience. April through June introduced two-factor authentication, a full reporting dashboard, and comment threads — strengthening both the safety and teamwork capabilities at the core of Camila.
+
+### v1.6.0 — June 2024
+
+- **Feature:** Two-factor authentication (2FA) — users can enable TOTP-based 2FA from the Security settings page, compatible with any standard authenticator app.
+- **Feature:** API key management — create, rotate, and revoke API keys per workspace from the Developer settings page, with optional expiry dates and scoped permissions.
+- **Improvement:** All forms now support autosave with a visual "Saved" indicator, so work is never lost due to accidental navigation or session interruptions.
+
+### v1.5.1 — May 2024
+
+- **Bug Fix:** Fixed an issue where users with the Viewer role could see the delete button on records. The underlying action was always blocked server-side, but the button is now correctly hidden from Viewers.
+- **Bug Fix:** Resolved a race condition in the notification system that was causing duplicate emails to be sent on bulk operations.
+- **Improvement:** Reduced bundle size by 22% by lazy-loading secondary views, resulting in faster initial page loads across the application.
+
+### v1.5.0 — April 2024
+
+- **Feature:** Reporting dashboard — aggregated views with charts, trends, and exportable reports to track activity and outcomes across your workspace.
+- **Feature:** Comment threads — add threaded comments to any record with full `@mention` support to notify specific teammates.
+- **Improvement:** Record detail pages now load 50% faster through optimistic rendering, displaying content immediately while background data fetching completes.

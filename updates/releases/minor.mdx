@@ -1,0 +1,75 @@
+---
+title: "Camila Minor Releases: Quarterly Feature Highlights"
+sidebarTitle: "Minor Releases"
+description: "A curated summary of Camila's quarterly minor releases, highlighting the most impactful features and improvements shipped each quarter."
+---
+
+Every quarter, Camila ships a minor release packed with new features, performance improvements, and UX enhancements. These releases are always backward-compatible — you can adopt them at your own pace. This page highlights the most impactful changes from each quarterly release.
+
+<Tabs>
+  <Tab title="Q2 2025">
+    ## Q2 2025 Highlights
+
+    **Headline Features**
+
+    - **Advanced dashboard filtering** — Build multi-condition filter sets using AND/OR logic, save them as named filters, and share them across your team. Find exactly the data you need without exporting to a spreadsheet.
+    - **Bulk export (up to 10,000 records)** — Export large datasets directly from any list view. Choose CSV, XLSX, or JSON, apply your active filters before exporting, and receive a download link by email when the file is ready.
+
+    **Key Improvement**
+
+    Dashboard load times are now **40% faster** on average, thanks to incremental rendering and smarter data prefetching. Heavy dashboards with many widgets load progressively, so you see data immediately rather than waiting for the full page.
+
+    [Read the full Q2 2025 release notes →](/changelog/2025/q2)
+  </Tab>
+
+  <Tab title="Q1 2025">
+    ## Q1 2025 Highlights
+
+    **Headline Features**
+
+    - **Team workspaces with role-based access** — Create dedicated workspaces for different teams or projects, and assign members roles (Viewer, Editor, Admin) to control exactly who can see and do what.
+    - **Webhook signature verification** — All outbound webhooks now include an `X-Camila-Signature` header so your receiving server can verify that events genuinely originate from Camila. Full verification documentation is available in the developer guides.
+
+    **Key Improvement**
+
+    The onboarding flow was redesigned from the ground up — **30% fewer steps** to get from sign-up to your first meaningful action. New users now reach their first value moment faster, and the setup wizard adapts based on your team size and use case.
+
+    [Read the full Q1 2025 release notes →](/changelog/2025/q1)
+  </Tab>
+
+  <Tab title="Q4 2024">
+    ## Q4 2024 Highlights
+
+    **Headline Features**
+
+    - **Saved views** — Save any combination of filters, sort order, and visible columns as a named view. Pin views to your sidebar for one-click access and share them with teammates.
+    - **Audit log** — A complete, tamper-evident log of every action taken in your workspace: who did what, when, and from which IP address. Available on Business and Enterprise plans.
+
+    **Key Improvement**
+
+    Inline previews now support **PDF, DOCX, and XLSX** files. Open attachments without leaving Camila — no download required. Preview quality matches the native application rendering for all three formats.
+
+    Note: Q4 2024 also includes the Camila 2.0 major release. See the [Major Releases](/updates/releases/major) page for the full story on what changed in 2.0.
+
+    [Read the full Q4 2024 release notes →](/changelog/2024/q4)
+  </Tab>
+
+  <Tab title="Q3 2024">
+    ## Q3 2024 Highlights
+
+    **Headline Features**
+
+    - **Integrations marketplace** — Connect Camila to the tools your team already uses. The initial marketplace launch includes first-party integrations with Slack (notifications and slash commands), Zapier (trigger-based automation with 5,000+ apps), and Google Workspace (Drive, Calendar, and Contacts sync).
+    - **Custom fields** — Add your own fields to any record type: text, number, date, single-select, multi-select, and URL. Custom fields are filterable, sortable, and exportable just like built-in fields.
+
+    **Key Improvement**
+
+    File uploads now show **real-time progress** with per-file status indicators, estimated time remaining, and clear error states if a file fails. Uploading large batches of files is now a visible, predictable experience.
+
+    [Read the full Q3 2024 release notes →](/changelog/2024/q3)
+  </Tab>
+</Tabs>
+
+<Tip>
+  All minor releases are covered in full technical detail in the Changelog tab. Use the Changelog for version numbers, exact specs, and API changes.
+</Tip>

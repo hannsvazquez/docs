@@ -1,0 +1,90 @@
+---
+title: "Camila Bug Fixes — Complete Log of All Resolved Issues"
+sidebarTitle: "Bug Fixes"
+description: "A complete log of all resolved bugs and stability fixes shipped in Camila, organized by release version and quarter, with links to release notes."
+---
+
+Camila ships bug fixes in both patch and minor releases. This page indexes every resolved issue by quarter. For full context on each fix, follow the link to the relevant quarterly release notes.
+
+<Tip>
+  If you're experiencing an issue and want to check whether it's been fixed, use the search bar at the top of the page.
+</Tip>
+
+## 2025 Bug Fixes
+
+<AccordionGroup>
+  <Accordion title="Q2 2025 — v2.4.0 & v2.3.1">
+    **v2.4.0**
+
+    | Issue | Details |
+    |-------|---------|
+    | Wrong timezone on date fields | Date fields displayed the wrong timezone for users in UTC+5 and above. Dates are now consistently normalized to the user's profile timezone. |
+
+    **v2.3.1**
+
+    | Issue | Details |
+    |-------|---------|
+    | Duplicate notifications | Fast-completing actions (e.g., completing a task within 500 ms of creation) triggered duplicate notification emails. |
+    | Broken pagination with tag filters | Applying three or more tag filters caused the pagination control to reset to page 1 on every render. |
+  </Accordion>
+  <Accordion title="Q1 2025 — v2.2.0 & v2.1.1">
+    **v2.2.0**
+
+    | Issue | Details |
+    |-------|---------|
+    | Silent failure on large file uploads | Files over 50 MB failed to upload without displaying an error message to the user. An explicit size-limit error is now shown. |
+    | Incorrect summary widget counts | Summary widgets on filtered dashboards returned counts from the unfiltered dataset rather than the active filter set. |
+
+    **v2.1.1**
+
+    | Issue | Details |
+    |-------|---------|
+    | Email deep-link routing | Notification emails contained links that routed to the workspace root rather than the specific record. |
+  </Accordion>
+</AccordionGroup>
+
+## 2024 Bug Fixes
+
+<AccordionGroup>
+  <Accordion title="Q4 2024 — v1.9.2">
+    | Issue | Details |
+    |-------|---------|
+    | CSV export missing last row | Exports of record sets with counts divisible by the page size dropped the final row due to an off-by-one error in the pagination cursor. |
+    | Safari 17 modal z-index bug | Modals rendered behind the sidebar overlay in Safari 17 due to a stacking context conflict. |
+    | Session token expiry not refreshed | Active sessions were incorrectly invalidated when the server-side token TTL elapsed mid-session instead of refreshing silently. |
+  </Accordion>
+  <Accordion title="Q3 2024 — v1.7.1">
+    | Issue | Details |
+    |-------|---------|
+    | Broken Google SSO OAuth redirect | The OAuth callback URL was not encoded correctly, causing Google SSO logins to fail for workspaces with special characters in their slug. |
+    | "Last seen" not updating via API | User "last seen" timestamps were only updated on web UI interactions, not on authenticated API requests. |
+  </Accordion>
+  <Accordion title="Q2 2024 — v1.5.1">
+    | Issue | Details |
+    |-------|---------|
+    | Delete button visible to Viewer role | Users with the Viewer role could see (but not successfully use) the delete button on record detail pages. The button is now hidden for non-destructive roles. |
+    | Duplicate emails on bulk operations | Triggering a notification-generating bulk operation (e.g., bulk-assign) sent duplicate notification emails to affected users. |
+  </Accordion>
+  <Accordion title="Q1 2024 — v1.3.0 & v1.2.0">
+    **v1.3.0**
+
+    Q1 2024 was primarily a feature release. No critical bug fixes were included in v1.3.0; see the [Q1 2024 release notes](/changelog/2024/q1) for full details.
+
+    **v1.2.0**
+
+    | Issue | Details |
+    |-------|---------|
+    | Incorrect sort order with multiple sort fields | Applying two or more sort fields produced non-deterministic ordering because secondary sort keys were not applied when the primary key values were equal. |
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Latest Quarter" icon="newspaper" href="/changelog/2025/q2">
+    Read the full Q2 2025 release notes, including all bug fixes and their technical context.
+  </Card>
+  <Card title="Back to Overview" icon="house" href="/changelog/introduction">
+    Return to the Changelog introduction for a high-level summary of how Camila versions and ships releases.
+  </Card>
+</CardGroup>

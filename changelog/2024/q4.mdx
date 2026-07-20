@@ -1,0 +1,30 @@
+---
+title: "Camila Q4 2024 Release Notes — October–December 2024"
+sidebarTitle: "Q4 2024"
+description: "All Camila product changes shipped in Q4 2024, including new features, bug fixes, and improvements released between October and December."
+---
+
+Q4 2024 was Camila's biggest quarter yet. October through December brought a landmark major release — including a fully unified API and real-time collaboration — alongside targeted bug fixes and reliability improvements across the board.
+
+### v2.0.0 — December 2024
+
+<Warning>
+  v2.0.0 is a major release that contains breaking changes. Please review the migration guide in Product Updates before upgrading.
+</Warning>
+
+- **Feature:** New unified API — all v1 endpoints have been consolidated under `/api/v2/` with consistent response envelopes across every resource type.
+- **Feature:** Real-time collaboration — multiple users can now view and edit the same record simultaneously, with live presence indicators showing who is active on a record.
+- **Breaking Change:** The `data.items` response field has been renamed to `data.results` across all list endpoints. Update any client-side code or integrations that reference the old field name.
+- **Improvement:** API response time p99 improved from 820ms to 190ms following infrastructure optimizations rolled out with this release.
+
+### v1.9.2 — November 2024
+
+- **Bug Fix:** Fixed an issue where CSV exports omitted the last row when the total row count was a multiple of 100.
+- **Bug Fix:** Resolved a display bug in Safari 17 where modal overlays appeared behind the navigation bar.
+- **Improvement:** Session tokens now auto-refresh 5 minutes before expiry to prevent unexpected logouts during active sessions.
+
+### v1.9.0 — October 2024
+
+- **Feature:** Saved views — save and share filtered list views with your team, preserving filter criteria, sort order, and visible columns.
+- **Feature:** Audit log — a complete, immutable log of all user and system actions within your workspace, accessible from the Workspace Settings page.
+- **Improvement:** Attachment previews now support PDF, DOCX, and XLSX formats inline, removing the need to download files before reviewing them.

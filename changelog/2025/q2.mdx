@@ -1,0 +1,59 @@
+---
+title: "Camila Q2 2025 Changelog: April, May, and June Releases"
+sidebarTitle: "Q2 2025"
+description: "All Camila product changes shipped in Q2 2025, covering new features, bug fixes, and improvements released between April and June 2025."
+---
+
+This page covers all changes shipped in Q2 2025 (April–June). Entries are tagged as **Feature**, **Bug Fix**, or **Improvement** to help you quickly identify the nature of each change.
+
+<Note>
+  This is the latest quarter. The most recent release, **v2.4.0**, is pinned at the top of this page.
+</Note>
+
+---
+
+### v2.4.0 — June 2025
+
+**Feature** — **Advanced dashboard filtering**
+Users can now filter their main dashboard by date range, status, and custom tags. Filters persist across sessions and can be saved as named presets for quick access.
+
+**Feature** — **Bulk export**
+Export up to 10,000 records as CSV or JSON directly from any list view. Exports are generated asynchronously and delivered via a download link sent to your email when ready.
+
+**Improvement** — **Dashboard load time reduced by 40%**
+The main dashboard now uses server-side pagination, significantly reducing the volume of data transferred on initial load. Users on slower connections will notice the most improvement.
+
+**Bug Fix** — **Timezone display for UTC+5 and above**
+Fixed an issue where date fields were rendered in the server's local timezone instead of the user's configured timezone. Users in UTC+5 and above were most affected. All date fields now correctly reflect the user's timezone preference.
+
+---
+
+### v2.3.1 — May 2025
+
+**Bug Fix** — **Duplicate notifications on fast-completing actions**
+Resolved a race condition that caused duplicate notifications to be dispatched when an action completed within 500ms of being triggered. Notification delivery is now idempotent within a 2-second window.
+
+**Bug Fix** — **Broken pagination on the activity log**
+Fixed an issue where the activity log pagination broke when filtering by more than 3 tags simultaneously. Pages now load correctly regardless of the number of active tag filters.
+
+**Improvement** — **Tooltip accessibility**
+All tooltips across the Camila interface now include proper `aria-label` and `role="tooltip"` attributes, improving compatibility with screen readers and other assistive technologies.
+
+---
+
+### v2.3.0 — April 2025
+
+**Feature** — **Custom notification rules**
+Users can now define per-event notification preferences with granular controls. Choose exactly which events trigger email, in-app, or webhook notifications — and configure different rules per workspace or project.
+
+**Feature** — **API rate limit headers**
+All Camila API responses now include the following headers to help you manage your integration's request budget:
+
+| Header | Description |
+|---|---|
+| `X-RateLimit-Limit` | The maximum number of requests allowed per window |
+| `X-RateLimit-Remaining` | The number of requests remaining in the current window |
+| `X-RateLimit-Reset` | Unix timestamp indicating when the current window resets |
+
+**Improvement** — **Real-time search indexing**
+Search indexing is now real-time. Previously, newly created or updated records could take up to 60 seconds to appear in search results. Changes are now reflected immediately.

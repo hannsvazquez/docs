@@ -1,0 +1,59 @@
+---
+title: "Camila Versioning Policy: Semantic Versions and Cadence"
+sidebarTitle: "Versioning"
+description: "Understand semantic versioning in Camila, what each version number means for your integration, and how often each release type ships."
+---
+
+Camila follows **semantic versioning** — every release is assigned a version number in the format `MAJOR.MINOR.PATCH`. Each component of that number carries a specific meaning that tells you, at a glance, how much attention a given release deserves. Releases ship on a regular, predictable cadence so you can plan integrations and upgrades with confidence.
+
+## Semantic versioning
+
+The three-part version number `MAJOR.MINOR.PATCH` works as follows:
+
+- **MAJOR** — A breaking change is included. Something in the existing API contract, configuration schema, or behavior has changed in a way that is not backward-compatible. **Action is required** — review the accompanying migration guide before upgrading.
+- **MINOR** — One or more new, backward-compatible features have been added. Your existing integration will continue to work without modification; you can adopt new capabilities at your own pace.
+- **PATCH** — Bug fixes and minor improvements only. No new features, no breaking changes. Safe to apply immediately.
+
+## Release cadence
+
+Camila ships updates on a structured schedule designed to balance velocity with predictability.
+
+| Release type | Frequency | Example |
+|---|---|---|
+| **Quarterly minor** | Four times per year (Q1–Q4) | `v2.4.0`, `v2.5.0` |
+| **Patch** | As needed between quarters | `v2.4.1`, `v2.4.2` |
+| **Major** | Announced in advance | `v3.0.0` |
+
+- **Quarterly minor releases** land at the start of each calendar quarter (Q1, Q2, Q3, Q4) and bundle all features and improvements accumulated since the previous quarterly release.
+- **Patch releases** ship as needed between quarters to address bugs or regressions that cannot wait for the next quarterly cycle. They are always safe to apply without reviewing migration notes.
+- **Major releases** are not tied to a fixed schedule. They are announced in advance via **Product Updates** and always accompanied by a detailed migration guide and a deprecation timeline.
+
+## Deprecation policy
+
+When a feature, endpoint, or configuration option is scheduled for removal, Camila will issue a **deprecation notice** in the changelog at least **one full quarter** before the change takes effect. This gives you a minimum of three months to update your integration.
+
+Deprecation notices include:
+
+- A clear description of what is being deprecated and why
+- The version in which the feature will be removed
+- A link to the recommended replacement or migration path
+
+All active deprecations are also surfaced in the relevant sections of the API and SDK reference documentation until the feature is fully removed.
+
+<Warning>
+  Breaking changes in MAJOR releases are always announced in Product Updates **at least 4 weeks before shipping**. Subscribe to Product Updates in your Camila account settings to ensure you never miss a breaking-change notice.
+</Warning>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="How do I know if a release affects me?">
+    Start with the version number. **PATCH** releases (e.g. `v2.4.1`) are safe to ignore unless you are experiencing a specific bug that was fixed. **MINOR** releases (e.g. `v2.5.0`) are additive — scan the entry titles to see if any new features are relevant to your use case. **MAJOR** releases (e.g. `v3.0.0`) always require your attention; read the full changelog entry and the linked migration guide before upgrading.
+  </Accordion>
+  <Accordion title="Where do I find breaking change migration guides?">
+    Every MAJOR release changelog entry includes a direct link to a step-by-step migration guide. Migration guides are also indexed under the **Migration** section of the Camila documentation. If you cannot find a guide for a specific breaking change, contact [Camila support](mailto:support@camila.app) and reference the version number.
+  </Accordion>
+  <Accordion title="How are hotfixes handled?">
+    Critical production issues — security patches, data-integrity fixes, or severe regressions — are addressed via hotfix patch releases that ship outside the normal quarterly cycle. Hotfix releases follow the same `MAJOR.MINOR.PATCH` format and are tagged `hotfix` in the changelog. You will also receive an in-app notification if the hotfix affects a feature your account actively uses.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,58 @@
+---
+title: "Camila Changelog: How to Read and Navigate Release Notes"
+sidebarTitle: "Introduction"
+description: "Learn how the Camila changelog is structured, what each entry covers, and how to interpret version numbers, release types, and tags."
+---
+
+The Camila changelog is the authoritative record of every release shipped to the platform. It is written for **engineers and technical users** who need precise, reliable information about what changed, when it changed, and how it may affect their integrations or workflows. Entries are organized into **quarterly buckets** (Q1–Q4) and every entry is tagged by release type — `feature`, `bug fix`, or `improvement` — so you can filter for exactly what matters to you.
+
+## What's included
+
+Every release shipped to Camila falls into one of three categories:
+
+- **Features** — New capabilities added to Camila. These expand what you can build or configure and are always backward-compatible unless accompanied by a MAJOR version bump.
+- **Bug Fixes** — Resolved defects and stability issues. These entries describe the problem that existed, the affected area, and the specific change that resolved it.
+- **Improvements** — Performance, UX, and quality-of-life enhancements. These are incremental upgrades that make existing functionality faster, cleaner, or easier to use without changing the underlying contract.
+
+## How to read an entry
+
+Each changelog entry follows a consistent anatomy so you can scan quickly and dig in only when relevant.
+
+<Steps>
+  <Step title="Version badge">
+    A semantic version label (e.g. `v2.4.0`) appears at the top of every entry. MAJOR releases are highlighted in a distinct color. See the [Versioning Policy](/changelog/versioning) for a full explanation of what each number means.
+  </Step>
+  <Step title="Release date">
+    The calendar date the release was deployed to production, formatted as `YYYY-MM-DD`. Patch releases between quarters are included in the same quarterly page as a sub-entry.
+  </Step>
+  <Step title="Entry title">
+    A concise, human-readable summary of the change — written from the perspective of what the user or developer now experiences.
+  </Step>
+  <Step title="Description">
+    A fuller explanation of the change: what was added or fixed, why it matters, and any relevant context. Technical details such as API endpoint changes, payload schema updates, or config key renames are called out explicitly here.
+  </Step>
+  <Step title="Technical details">
+    Where applicable, entries include code snippets, migration notes, or links to updated reference documentation. Look for a **Migration guide** link when the entry is tagged as a breaking change.
+  </Step>
+</Steps>
+
+## Browse the changelog
+
+<CardGroup cols={2}>
+  <Card title="Latest Quarter" icon="calendar" href="/changelog/2025/q2">
+    Read all releases shipped in Q2 2025, including new features, fixes, and improvements.
+  </Card>
+  <Card title="Versioning Policy" icon="tag" href="/changelog/versioning">
+    Understand how Camila versions its releases and what each number means for your integration.
+  </Card>
+  <Card title="New Features" icon="sparkles" href="/changelog/features">
+    Browse every feature release across all versions of Camila.
+  </Card>
+  <Card title="Bug Fixes" icon="bug" href="/changelog/bug-fixes">
+    Find resolved defects and stability improvements by version or date.
+  </Card>
+</CardGroup>
+
+<Note>
+  Use the search bar to find any release by keyword, version number, or date. For example, search `v2.3` to jump straight to that release, or search `webhooks` to surface every entry that touched webhook behavior.
+</Note>
