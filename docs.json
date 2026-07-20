@@ -38,10 +38,10 @@
             ]
           },
           {
-            "group": "2025",
+            "group": "2026",
             "pages": [
-              "changelog/2025/q2",
-              "changelog/2025/q1"
+              "changelog/2026/q2",
+              "changelog/2026/q1"
             ]
           },
           {
@@ -91,7 +91,7 @@
             "group": "Resources",
             "pages": [
               "updates/faq",
-              "updates/contact"
+              "updates/help"
             ]
           }
         ]
