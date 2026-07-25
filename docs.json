@@ -41,39 +41,7 @@
             "group": "Cycles",
             "icon": "rotate",
             "pages": [
-              "changelog/cycles/cycle-05",
-              "changelog/cycles/cycle-04",
-              "changelog/cycles/cycle-03"
-            ]
-          },
-          {
-            "group": "Release Types",
-            "pages": [
-              "changelog/features",
-              "changelog/bug-fixes",
-              "changelog/improvements"
-            ]
-          },
-          {
-            "group": "Archive",
-            "icon": "box-archive",
-            "pages": [
-              {
-                "group": "2026",
-                "pages": [
-                  "changelog/2026/q2",
-                  "changelog/2026/q1"
-                ]
-              },
-              {
-                "group": "2024",
-                "pages": [
-                  "changelog/2024/q4",
-                  "changelog/2024/q3",
-                  "changelog/2024/q2",
-                  "changelog/2024/q1"
-                ]
-              }
+              "changelog/cycles/cycle-05"
             ]
           }
         ]
@@ -120,7 +88,52 @@
   "redirects": [
     {
       "source": "/changelog/2026/q3",
-      "destination": "/changelog/cycles/cycle-04",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/q2",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/q1",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2024/q4",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2024/q3",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2024/q2",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2024/q1",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/features",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/bug-fixes",
+      "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/improvements",
+      "destination": "/changelog/introduction",
       "permanent": true
     }
   ]
