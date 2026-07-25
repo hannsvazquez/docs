@@ -1,56 +1,73 @@
 ---
 title: "About the Camila changelog"
 sidebarTitle: "Introduction"
-description: "Learn more about the latest changes we are shipping for the Camila app to stay informed about new features, bug fixes and improvements we are adding every new month."
+description: "How the Camila changelog works: one entry published at the end of every two-week cycle, tagged by product category and subscription plan."
 ---
 
-You'll also find that we like to organized our work in cycles and divided by the subscription plans we offer:
+Welcome to the Camila changelog — the technical record of everything we ship to the platform. Every new feature, improvement, and fix lands here first, written so you can tell at a glance whether a change affects the way you work.
 
-- Camila Pro (A basic account for individual Real Estate agents)
-- Camila Business (The full suite of features for small and mid-sized Real Estate companies)
+You'll also find that we like to organize our work in cycles and divide it by the subscription plans we offer:
+
+- **Camila Pro** — a basic account for individual Real Estate agents.
+- **Camila Business** — the full suite of features for small and mid-sized Real Estate companies.
+
+<Note>
+  Looking for the bigger picture instead? Our public announcements live in the Press Release section, written for everyone — no technical background needed.
+</Note>
+
+## How we organize releases
+
+### Cycles
+
+We build in two-week cycles, the same ones our product and engineering teams run day to day. Each cycle has a number and a fixed date range, and we publish one changelog entry at the end of every cycle collecting everything that shipped inside it.
+
+Cycle numbers are sequential and never reused, so Cycle 5 always points to the same two weeks of work.
+
+<Card title="Cycle 5" icon="circle-dot" href="/changelog/cycles/cycle-05">
+  July 24 – August 7, 2026 · In progress
+</Card>
+
+### Subscription plans
+
+Every entry carries the plan it ships on, so you never have to guess whether a change is available to your account:
+
+| Plan | What it means |
+| --- | --- |
+| **Camila Pro** | Available on both Pro and Business accounts. |
+| **Camila Business** | Exclusive to Business accounts. Pro users can upgrade at any time. |
+
+<Note>
+  Camila Business includes everything in Camila Pro, so an entry tagged **Camila Pro** is available to every customer.
+</Note>
 
 ## How to read a new entry in the changelog
 
 Each changelog entry follows a consistent anatomy so you can scan quickly and dig in only when relevant.
 
 <Steps>
-  <Step title="Version badge">
-    A semantic version label (e.g. `v2.4.0`) appears at the top of every entry. MAJOR releases are highlighted in a distinct color. See the [Versioning Policy](/changelog/versioning) for a full explanation of what each number means.
+  <Step title="Cycle and date">
+    Entries are filed under the cycle they shipped in, with the exact release date — for example, `July 19th, 2026` — at the top of the entry.
   </Step>
-  <Step title="Release date">
-    The calendar date the release was deployed to production, formatted as `YYYY-MM-DD`. Patch releases between quarters are included in the same quarterly page as a sub-entry.
+  <Step title="Title">
+    A concise summary of the change in 15 words or less, written from the perspective of what you can now do in Camila.
   </Step>
-  <Step title="Entry title">
-    A concise, human-readable summary of the change — written from the perspective of what the user or developer now experiences.
+  <Step title="Type">
+    Every entry is one of **New feature**, **Feature improvement**, **New integration**, or **Bug fix**.
   </Step>
-  <Step title="Description">
-    A fuller explanation of the change: what was added or fixed, why it matters, and any relevant context. Technical details such as API endpoint changes, payload schema updates, or config key renames are called out explicitly here.
+  <Step title="Product category">
+    The area of the product the change belongs to — for example **Leads**, **Property Hub**, **AI Workflows**, **Sales Knowledge**, or **Reports**.
   </Step>
-  <Step title="Technical details">
-    Where applicable, entries include code snippets, migration notes, or links to updated reference documentation. Look for a **Migration guide** link when the entry is tagged as a breaking change.
+  <Step title="Plan availability">
+    The subscription plan the change ships on — **Camila Pro** or **Camila Business**.
+  </Step>
+  <Step title="What changed and why">
+    A short explanation of what we built and the problem it solves for your sales operation.
+  </Step>
+  <Step title="How to try it">
+    The steps to find the change in production, so you can test it yourself right away.
   </Step>
 </Steps>
 
-## Browse the changelog
-
-<CardGroup cols={2}>
-  <Card title="Latest Quarter" icon="calendar" href="/changelog/2025/q2">
-    Read all releases shipped in Q2 2025, including new features, fixes, and improvements.
-  </Card>
-
-  <Card title="Versioning Policy" icon="tag" href="/changelog/versioning">
-    Understand how Camila versions its releases and what each number means for your integration.
-  </Card>
-
-  <Card title="New Features" icon="sparkles" href="/changelog/features">
-    Browse every feature release across all versions of Camila.
-  </Card>
-
-  <Card title="Bug Fixes" icon="bug" href="/changelog/bug-fixes">
-    Find resolved defects and stability improvements by version or date.
-  </Card>
-</CardGroup>
-
 <Note>
-  Use the search bar to find any release by keyword, version number, or date. For example, search `v2.3` to jump straight to that release, or search `webhooks` to surface every entry that touched webhook behavior.
+  Use the search bar to find any release by keyword, cycle number, or product category. For example, search `Cycle 5` to jump straight to that cycle, or search `WhatsApp` to surface every entry that touched WhatsApp behavior.
 </Note>
