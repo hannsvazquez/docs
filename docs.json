@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Camila - Official Docs",
+  "name": "Camila - Documentación oficial",
   "theme": "sequoia",
   "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
+    "primary": "#7255DA",
+    "light": "#DCD2DB",
+    "dark": "#1F1C22"
   },
   "favicon": "/favicon.svg",
   "logo": {
@@ -16,13 +16,13 @@
     "links": [
       {
         "href": "https://wa.me/51968781139",
-        "label": "Customer Support"
+        "label": "Soporte al cliente"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Open Camila",
-      "href": "https://app.camila.app"
+      "label": "Abrir Camila",
+      "href": "https://camila.brandlift.pe"
     }
   },
   "navigation": {
@@ -31,14 +31,14 @@
         "tab": "Changelog",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Resumen",
             "pages": [
               "changelog/introduction",
               "changelog/versioning"
             ]
           },
           {
-            "group": "Cycles",
+            "group": "Ciclos",
             "icon": "circle-arrow-out-up-right",
             "pages": [
               "changelog/cycles/cycle-05"
@@ -51,13 +51,13 @@
         "tab": "Press Release",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Resumen",
             "pages": [
               "press-release/introduction"
             ]
           },
           {
-            "group": "Version 2.0",
+            "group": "Versión 2.0",
             "icon": "rocket",
             "pages": [
               "press-release/version-2-0/seguimiento-leads-frios"
@@ -167,9 +167,14 @@
       "permanent": true
     }
   ],
-  "description": "Explore the official documentation for Camila, the most advanced Real Estate agent in the world. Discover product releases, the changelog, integration guides, FAQs, and everything you need to get the most out of Camila.",
+  "description": "Explora la documentación oficial de Camila, el agente de Real Estate más avanzado del mundo. Descubre lanzamientos de producto, el changelog, guías de integración, preguntas frecuentes y todo lo que necesitas para sacarle el máximo provecho a Camila.",
   "fonts": {
-    "family": "Lexend"
+    "heading": {
+      "family": "Funnel Display"
+    },
+    "body": {
+      "family": "Funnel Sans"
+    }
   },
   "icons": {
     "library": "lucide"
