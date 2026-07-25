@@ -38,20 +38,12 @@
             ]
           },
           {
-            "group": "2026",
+            "group": "Cycles",
+            "icon": "rotate",
             "pages": [
-              "changelog/2026/q3",
-              "changelog/2026/q2",
-              "changelog/2026/q1"
-            ]
-          },
-          {
-            "group": "2024",
-            "pages": [
-              "changelog/2024/q4",
-              "changelog/2024/q3",
-              "changelog/2024/q2",
-              "changelog/2024/q1"
+              "changelog/cycles/cycle-05",
+              "changelog/cycles/cycle-04",
+              "changelog/cycles/cycle-03"
             ]
           },
           {
@@ -60,6 +52,28 @@
               "changelog/features",
               "changelog/bug-fixes",
               "changelog/improvements"
+            ]
+          },
+          {
+            "group": "Archive",
+            "icon": "box-archive",
+            "pages": [
+              {
+                "group": "2026",
+                "pages": [
+                  "changelog/2026/q2",
+                  "changelog/2026/q1"
+                ]
+              },
+              {
+                "group": "2024",
+                "pages": [
+                  "changelog/2024/q4",
+                  "changelog/2024/q3",
+                  "changelog/2024/q2",
+                  "changelog/2024/q1"
+                ]
+              }
             ]
           }
         ]
@@ -102,5 +116,12 @@
   },
   "footer": {
     "socials": {}
-  }
+  },
+  "redirects": [
+    {
+      "source": "/changelog/2026/q3",
+      "destination": "/changelog/cycles/cycle-04",
+      "permanent": true
+    }
+  ]
 }
