@@ -52,29 +52,14 @@
           {
             "group": "Overview",
             "pages": [
-              "updates/introduction",
-              "updates/roadmap"
+              "press-release/introduction"
             ]
           },
           {
-            "group": "Announcements",
+            "group": "Version 2.0",
+            "icon": "rocket",
             "pages": [
-              "updates/announcements/latest",
-              "updates/announcements/archive"
-            ]
-          },
-          {
-            "group": "Releases",
-            "pages": [
-              "updates/releases/major",
-              "updates/releases/minor"
-            ]
-          },
-          {
-            "group": "Resources",
-            "pages": [
-              "updates/faq",
-              "updates/help"
+              "press-release/version-2-0/seguimiento-leads-frios"
             ]
           }
         ],
@@ -134,6 +119,46 @@
     {
       "source": "/changelog/improvements",
       "destination": "/changelog/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/updates/introduction",
+      "destination": "/press-release/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/updates/roadmap",
+      "destination": "/press-release/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/updates/announcements/latest",
+      "destination": "/press-release/version-2-0/seguimiento-leads-frios",
+      "permanent": true
+    },
+    {
+      "source": "/updates/announcements/archive",
+      "destination": "/press-release/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/updates/releases/major",
+      "destination": "/press-release/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/updates/releases/minor",
+      "destination": "/press-release/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/updates/faq",
+      "destination": "/press-release/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/updates/help",
+      "destination": "/press-release/introduction",
       "permanent": true
     }
   ]
