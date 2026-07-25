@@ -1,28 +1,28 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Camila",
-  "theme": "willow",
+  "name": "Camila - Documentación oficial",
+  "theme": "sequoia",
   "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
+    "primary": "#7255DA",
+    "light": "#DCD2DB",
+    "dark": "#1F1C22"
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/Camila-logo-vector.svg",
+    "dark": "/images/Brandlift-light-v-logo.svg"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@camila.app"
+        "href": "https://wa.me/51968781139",
+        "label": "Soporte al cliente"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Open Camila",
-      "href": "https://app.camila.app"
+      "label": "Abrir Camila",
+      "href": "https://camila.brandlift.pe"
     }
   },
   "navigation": {
@@ -31,32 +31,33 @@
         "tab": "Changelog",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Resumen",
             "pages": [
               "changelog/introduction",
               "changelog/versioning"
             ]
           },
           {
-            "group": "Cycles",
-            "icon": "rotate",
+            "group": "Ciclos",
+            "icon": "circle-arrow-out-up-right",
             "pages": [
               "changelog/cycles/cycle-05"
             ]
           }
-        ]
+        ],
+        "icon": "workflow"
       },
       {
         "tab": "Press Release",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Resumen",
             "pages": [
               "press-release/introduction"
             ]
           },
           {
-            "group": "Version 2.0",
+            "group": "Versión 2.0",
             "icon": "rocket",
             "pages": [
               "press-release/version-2-0/seguimiento-leads-frios"
@@ -68,7 +69,11 @@
     ]
   },
   "footer": {
-    "socials": {}
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/brandlift-ia",
+      "instagram": "https://www.instagram.com/brandlift.peru",
+      "website": "https://www.brandlift.pe/"
+    }
   },
   "redirects": [
     {
@@ -161,5 +166,17 @@
       "destination": "/press-release/introduction",
       "permanent": true
     }
-  ]
+  ],
+  "description": "Explora la documentación oficial de Camila, el agente de Real Estate más avanzado del mundo. Descubre lanzamientos de producto, el changelog, guías de integración, preguntas frecuentes y todo lo que necesitas para sacarle el máximo provecho a Camila.",
+  "fonts": {
+    "heading": {
+      "family": "Funnel Display"
+    },
+    "body": {
+      "family": "Funnel Sans"
+    }
+  },
+  "icons": {
+    "library": "lucide"
+  }
 }
