@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Camila",
-  "theme": "willow",
+  "name": "Camila - Official Docs",
+  "theme": "sequoia",
   "colors": {
     "primary": "#ef7025",
     "light": "#eec9bc",
@@ -9,14 +9,18 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/Brandlift-light-v-logo.svg",
+    "dark": "/images/Camila-logo-vector.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@camila.app"
+        "href": "mailto: hann@brandlift.pe"
+      },
+      {
+        "href": "https://wa.me/51968781139",
+        "label": "Talk to Sales"
       }
     ],
     "primary": {
@@ -69,7 +73,10 @@
     ]
   },
   "footer": {
-    "socials": {}
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/brandlift-ia",
+      "instagram": "https://www.instagram.com/brandlift.peru"
+    }
   },
   "redirects": [
     {
@@ -162,5 +169,9 @@
       "destination": "/press-release/introduction",
       "permanent": true
     }
-  ]
+  ],
+  "description": "Explore the official documentation for Camila, the most advanced Real Estate agent in the world. Discover product releases, the changelog, integration guides, FAQs, and everything you need to get the most out of Camila.",
+  "fonts": {
+    "family": "Lexend"
+  }
 }
