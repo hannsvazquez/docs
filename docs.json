@@ -9,18 +9,14 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/images/Brandlift-light-v-logo.svg",
-    "dark": "/images/Camila-logo-vector.svg"
+    "light": "/images/Camila-logo-vector.svg",
+    "dark": "/images/Brandlift-light-v-logo.svg"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto: hann@brandlift.pe"
-      },
-      {
         "href": "https://wa.me/51968781139",
-        "label": "Talk to Sales"
+        "label": "Customer Support"
       }
     ],
     "primary": {
@@ -43,13 +39,13 @@
           },
           {
             "group": "Cycles",
-            "icon": "rotate",
+            "icon": "circle-arrow-out-up-right",
             "pages": [
               "changelog/cycles/cycle-05"
             ]
           }
         ],
-        "icon": "project-diagram"
+        "icon": "workflow"
       },
       {
         "tab": "Press Release",
@@ -75,7 +71,8 @@
   "footer": {
     "socials": {
       "linkedin": "https://www.linkedin.com/company/brandlift-ia",
-      "instagram": "https://www.instagram.com/brandlift.peru"
+      "instagram": "https://www.instagram.com/brandlift.peru",
+      "website": "https://www.brandlift.pe/"
     }
   },
   "redirects": [
@@ -173,5 +170,8 @@
   "description": "Explore the official documentation for Camila, the most advanced Real Estate agent in the world. Discover product releases, the changelog, integration guides, FAQs, and everything you need to get the most out of Camila.",
   "fonts": {
     "family": "Lexend"
+  },
+  "icons": {
+    "library": "lucide"
   }
 }
