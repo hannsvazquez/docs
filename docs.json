@@ -44,7 +44,8 @@
               "changelog/cycles/cycle-05"
             ]
           }
-        ]
+        ],
+        "icon": "project-diagram"
       },
       {
         "tab": "Press Release",
