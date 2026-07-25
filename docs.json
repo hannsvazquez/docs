@@ -65,7 +65,7 @@
         ]
       },
       {
-        "tab": "Product Updates",
+        "tab": "Press Release",
         "groups": [
           {
             "group": "Overview",
@@ -95,7 +95,8 @@
               "updates/help"
             ]
           }
-        ]
+        ],
+        "icon": "newspaper"
       }
     ]
   },
