@@ -62,6 +62,13 @@
             "pages": [
               "press-release/version-2-0/seguimiento-leads-frios"
             ]
+          },
+          {
+            "group": "Versión 3.0",
+            "icon": "sparkles",
+            "pages": [
+              "press-release/version-3-0/inventario-de-proyectos"
+            ]
           }
         ],
         "icon": "newspaper"
