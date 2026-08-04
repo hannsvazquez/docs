@@ -79,7 +79,7 @@
     "socials": {
       "linkedin": "https://www.linkedin.com/company/brandlift-ia",
       "instagram": "https://www.instagram.com/brandlift.peru",
-      "website": "https://www.brandlift.pe/"
+      "website": "https://www.camila.brandlift.pe/"
     }
   },
   "redirects": [
@@ -185,5 +185,8 @@
   },
   "icons": {
     "library": "lucide"
+  },
+  "appearance": {
+    "default": "light"
   }
 }
